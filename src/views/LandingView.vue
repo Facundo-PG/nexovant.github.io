@@ -35,41 +35,39 @@ onUnmounted(() => {
 /* CONTENEDOR PRINCIPAL */
 .landing-container {
   position: relative;
-  height: 100vh;
+  /* Usamos 100dvh para que la altura se ajuste dinámicamente en móviles */
+  height: 100dvh;
   width: 100vw;
-  margin: 0 auto; /* Centrar */
+  margin: 0;
   overflow: hidden;
 }
 
-/* BACKGROUND COMO DIV (ya no se usa <img>) */
+/* BACKGROUND COMO DIV */
 .background-image {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw; /* Ocupa el 100% del ancho de la pantalla */
-  height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+  width: 100%;
+  /* Usamos 100dvh también aquí para asegurar que el fondo cubra el contenedor */
+  height: 100dvh;
   background-image: var(--cover-image);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; /* Escala la imagen para cubrir todo el espacio sin deformarla */
+  background-size: cover;
   background-color: #0b2545;
-  z-index: -1; /* Coloca el fondo detrás de otros contenidos */
+  z-index: -1;
 }
 
-/* 2. Para pantallas verticales (celulares), aplicamos un 'zoom' manual */
-.background-image {
-  @media (orientation: portrait) {
-    background-size: 180% auto; /* Juega con este valor */
-  }
-}
+/* Eliminamos el media query para orientation: portrait que ya no es necesario con 'cover' */
 
-/* Opcional: Asegúrate de que el body no tenga márgenes */
-body, html {
+/* Asegúrate de que el body y html no tengan márgenes */
+:global(body, html) {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
 }
+
 /* CONTENIDO SUPERIOR */
 .content {
   position: absolute;
