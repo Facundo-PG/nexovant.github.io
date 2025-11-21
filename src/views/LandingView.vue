@@ -35,12 +35,13 @@ onUnmounted(() => {
 /* CONTENEDOR PRINCIPAL */
 .landing-container {
   position: relative;
-  /* CAMBIO: Haz que el contenedor principal ocupe todo el ancho. */
-  width: 100vw;
+  width: 95vw; /* Más angosto para que el título no se corte */
   height: 100vh;
-  /* El 'margin: auto' ya no es necesario si ocupa el 100% */
+  width: 100vw;
+  margin: 0 auto; /* Centrar */
   overflow: hidden;
 }
+
 /* BACKGROUND COMO DIV (ya no se usa <img>) */
 .background-image {
   position: absolute;
