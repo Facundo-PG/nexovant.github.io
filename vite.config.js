@@ -7,7 +7,7 @@ const REPO_BASE = './';
 
 export default defineConfig({
   // 1. Establecer la base de las rutas a './' (relativo)
-  base: './', 
+ 
   
   // 2. Activar el plugin de Vue
   plugins: [vue()], 
