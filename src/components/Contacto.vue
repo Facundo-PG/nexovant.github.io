@@ -239,14 +239,14 @@
 
 @media (max-width: 480px) {
   .section-container {
-    padding: 20px 10px;
+    padding: 25px 15px; /* Un poco más de padding */
     align-items: flex-start;
   }
   .contact-wrapper {
-    margin-top: 20px;
+    margin-top: 15px;
   }
   .info-side, .action-side {
-    padding: 20px 15px;
+    padding: 25px 20px; /* Más padding interno */
   }
   .info-title {
     font-size: 1.6rem;

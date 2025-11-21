@@ -199,7 +199,7 @@
 
 @media (max-width: 768px) {
   .section-container {
-    padding: 40px 15px;
+    padding: 40px 20px; /* Más padding lateral */
     min-height: auto;
   }
   .section-title {
@@ -207,25 +207,27 @@
   }
   .section-description {
     font-size: 1rem;
-    padding: 0 5px;
+    padding: 0 10px; /* Más padding lateral */
     margin-bottom: 30px;
   }
   .servicios-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 20px; /* Más gap entre tarjetas */
     max-width: 100%;
     width: 100%;
+    padding: 0 10px; /* Padding interno del grid */
   }
   .service-card {
     height: 260px;
-    max-width: 350px;
+    max-width: 320px; /* Un poco más pequeña */
     margin: 0 auto;
+    width: 100%; /* Asegurar que use todo el ancho disponible */
   }
 }
 
 @media (max-width: 480px) {
   .section-container {
-    padding: 30px 10px;
+    padding: 30px 15px; /* Más padding lateral */
   }
   .section-title {
     font-size: 1.8rem;
@@ -235,43 +237,59 @@
   }
   .section-description {
     font-size: 0.9rem;
+    padding: 0 5px;
+  }
+  .servicios-grid {
+    padding: 0 5px; /* Padding del grid */
+    gap: 18px;
   }
   .service-card {
     height: 240px;
-    max-width: 300px;
+    max-width: 290px; /* Un poco más pequeña para evitar corte */
+    width: calc(100% - 10px); /* Asegurar margen */
   }
   .card-front, .card-back {
-    padding: 15px;
+    padding: 12px; /* Menos padding interno */
   }
   .card-front h3 {
-    font-size: 1.1rem;
-    min-height: 2.5rem;
+    font-size: 1rem; /* Un poco más pequeño */
+    min-height: 2.2rem;
+    line-height: 1.1;
   }
   .servicio-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 12px;
   }
   .servicio-icon svg {
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
   }
   .stat-number {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   .card-back h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
   }
   .card-back p {
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 0.85rem;
+    line-height: 1.3;
+    padding: 0 5px;
   }
 }
 
 @media (max-width: 390px) {
+  .section-container {
+    padding: 25px 10px;
+  }
+  .servicios-grid {
+    padding: 0;
+  }
   .service-card {
     height: 220px;
-    max-width: 280px;
+    max-width: 270px;
+    width: calc(100% - 20px); /* Más margen lateral */
   }
   .section-title {
     font-size: 1.6rem;
@@ -279,18 +297,25 @@
 }
 
 @media (max-width: 320px) {
+  .section-container {
+    padding: 20px 8px;
+  }
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .service-card {
     height: 200px;
-    max-width: 260px;
+    max-width: 250px;
+    width: calc(100% - 16px);
   }
   .card-front h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .stat-number {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  .card-front, .card-back {
+    padding: 10px;
   }
 }
 </style>
