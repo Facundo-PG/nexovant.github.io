@@ -133,25 +133,6 @@ html {
     font-size: 0.8rem;
     padding: 8px 20px;
   }
-  /* Ajustar ancho del background en celulares para evitar recortes */
-@media (max-width: 480px) {
-  .landing-container {
-    width: 90vw; /* antes 95vw → ahora un poco más angosta */
-  }
-}
-
-@media (max-width: 390px) {
-  .landing-container {
-    width: 88vw; /* un poco más para pantallas tipo iPhone 12 Mini */
-  }
-}
-
-@media (max-width: 320px) {
-  .landing-container {
-    width: 85vw; /* ultra pequeño, evita cortes */
-  }
-}
-
 }
 
 </style>

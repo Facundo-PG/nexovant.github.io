@@ -78,8 +78,8 @@ onUnmounted(() => { clearInterval(intervalId); });
 .section-container {
   position: relative;
   background-color: #2c2c54;
-  height: 100vh;
-  overflow-y: auto;
+  min-height: 100vh; /* Cambiar a min-height para permitir contenido más largo */
+  padding-bottom: 40px; /* Agregar padding inferior para evitar corte de contenido */
   box-sizing: border-box;
 }
 
@@ -146,10 +146,13 @@ onUnmounted(() => { clearInterval(intervalId); });
 
 @media (max-width: 768px) {
   .carousel-container {
-    height: 45vh;
+    height: 40vh; /* Reducir más para dar espacio al texto */
   }
   .content-wrapper {
-    padding: 30px 20px; /* Menos padding en móvil */
+    padding: 20px 15px; /* Menos padding en móvil */
+  }
+  .text-content {
+    padding: 25px; /* Menos padding interno */
   }
   .mision-vision-container {
     flex-direction: column;
@@ -157,5 +160,81 @@ onUnmounted(() => { clearInterval(intervalId); });
   }
   .section-title { font-size: 2.2rem; }
   .intro-text { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 35vh; /* Aún más pequeño en móviles */
+  }
+  .content-wrapper {
+    padding: 15px 10px;
+  }
+  .text-content {
+    padding: 20px;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .section-subtitle {
+    font-size: 1.2rem;
+  }
+  .intro-text {
+    font-size: 0.9rem;
+  }
+  .mision-vision-item h3 {
+    font-size: 1.3rem;
+  }
+  .mision-vision-item p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .carousel-control {
+    padding: 8px 12px;
+    font-size: 1.2rem;
+  }
+  .carousel-control.prev {
+    left: 15px;
+  }
+  .carousel-control.next {
+    right: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .carousel-container {
+    height: 30vh;
+  }
+  .content-wrapper {
+    padding: 10px 8px;
+  }
+  .text-content {
+    padding: 15px;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .intro-text {
+    font-size: 0.85rem;
+  }
+  .mision-vision-item h3 {
+    font-size: 1.1rem;
+  }
+  .mision-vision-item p {
+    font-size: 0.85rem;
+  }
+  .carousel-control {
+    padding: 6px 10px;
+    font-size: 1rem;
+  }
+  .carousel-control.prev {
+    left: 10px;
+  }
+  .carousel-control.next {
+    right: 10px;
+  }
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
 }
 </style>
