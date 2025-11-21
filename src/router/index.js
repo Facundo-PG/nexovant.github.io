@@ -1,30 +1,29 @@
+// src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
 
-// Corregido: Se eliminó el '../' que era incorrecto.
-// El alias '@' ya apunta directamente a la carpeta 'src'.
+// La ruta es la correcta ('@/views/'), sin '../'.
+// El nombre del componente HomeView.vue está en PascalCase (V mayúscula).
 import LandingView from '@/views/LandingView.vue'; 
 import HomeView from '@/views/Homeview.vue';
 
 // 1. Definimos las rutas
 const routes = [
   {
-    path: '/', // La ruta raíz (ej: www.nexovant.com/)
+    path: '/',
     name: 'Landing',
-    component: LandingView // Mostrará la portada
+    component: LandingView
   },
   {
-    path: '/home', // La ruta para la página principal (ej: www.nexovant.com/home)
+    path: '/home',
     name: 'Home',
-    component: HomeView // Mostrará el contenido principal
+    component: HomeView
   }
 ];
 
 // 2. Creamos la instancia del router
-// La configuración de history: createWebHistory() funciona correctamente.
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 });
-
 
 export default router;
