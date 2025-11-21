@@ -52,7 +52,30 @@ onUnmounted(() => { clearInterval(intervalId); });
         <h2 class="section-subtitle">NUESTRA</h2>
         <h1 class="section-title">EMPRESA</h1>
         <p class="intro-text">
-          Nexovant Ingeniería y Tecnología SRL es una empresa familiar con más de 20 años de experiencia en telecomunicaciones, fundada por padre e hijos. Su enfoque es brindar un trato cercano y personalizado, combinando la agilidad de una organización joven con la solidez del conocimiento acumulado para ofrecer soluciones confiables y un compromiso con la excelencia.
+          Nexovant Ingeniería y Tecnología SRL se erige como un pilar de solidez y confiabilidad en el sector de las telecomunicaciones, sustentada en una trayectoria ininterrumpida de más de <strong>20 años de experiencia</strong> y conocimiento especializado.
+        </p>
+        
+        <div class="empresa-highlights">
+          <h4>Nuestra Esencia</h4>
+          <ul class="highlights-list">
+            <li><strong>Tradición Familiar:</strong> Fundada bajo la alianza entre padre e hijos, combinando sabiduría acumulada con visión innovadora.</li>
+            <li><strong>Enfoque Humano:</strong> Trato cercano, personalizado y empático en cada proyecto.</li>
+            <li><strong>Experiencia Comprobada:</strong> Más de dos décadas perfeccionando soluciones de telecomunicaciones.</li>
+          </ul>
+        </div>
+
+        <div class="empresa-highlights">
+          <h4>Nuestro Compromiso</h4>
+          <ul class="highlights-list">
+            <li><strong>Soluciones Confiables:</strong> Desplegamos tecnología robusta y durable para optimizar su negocio.</li>
+            <li><strong>Excelencia en Servicio:</strong> Superamos expectativas desde la consultoría hasta el soporte continuo.</li>
+            <li><strong>Agilidad Operativa:</strong> Respuesta rápida a las necesidades cambiantes del mercado.</li>
+            <li><strong>Soporte Integral:</strong> Acompañamiento completo en todo el ciclo de vida del proyecto.</li>
+          </ul>
+        </div>
+
+        <p class="closing-statement">
+          <em>"Nexovant es su socio estratégico, combinando la solidez del conocimiento familiar con la agilidad de la innovación. <strong>Nuestra experiencia es su mayor garantía.</strong>"</em>
         </p>
         <div class="mision-vision-container">
           <div class="mision-vision-item">
@@ -203,6 +226,91 @@ onUnmounted(() => { clearInterval(intervalId); });
   color: #222;
 }
 
+/* Estilos para las viñetas */
+.empresa-highlights {
+  margin-bottom: 2rem;
+}
+
+.empresa-highlights h4 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  border-left: 4px solid #3498db;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+}
+
+.text-content:hover .empresa-highlights h4 {
+  color: #8A2BE2;
+  border-left-color: #8A2BE2;
+}
+
+.highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.highlights-list li {
+  position: relative;
+  padding: 8px 0 8px 30px;
+  margin-bottom: 12px;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.highlights-list li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  color: #3498db;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.text-content:hover .highlights-list li::before {
+  color: #8A2BE2;
+  transform: translateX(3px);
+}
+
+.text-content:hover .highlights-list li {
+  color: #333;
+  transform: translateX(5px);
+}
+
+.highlights-list li strong {
+  color: #2c3e50;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.text-content:hover .highlights-list li strong {
+  color: #6A1B9A;
+}
+
+.closing-statement {
+  font-size: 1rem;
+  color: #2c3e50;
+  text-align: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #3498db;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.text-content:hover .closing-statement {
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+  border-left-color: #8A2BE2;
+  color: #4A148C;
+}
+
 .mision-vision-container { 
   display: flex; 
   gap: 30px; 
@@ -265,6 +373,20 @@ onUnmounted(() => { clearInterval(intervalId); });
   }
   .section-title { font-size: 2.2rem; }
   .intro-text { font-size: 1rem; }
+  
+  /* Estilos responsivos para viñetas */
+  .empresa-highlights h4 {
+    font-size: 1.1rem;
+    padding-left: 12px;
+  }
+  .highlights-list li {
+    font-size: 0.9rem;
+    padding-left: 25px;
+  }
+  .closing-statement {
+    font-size: 0.95rem;
+    padding: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -292,6 +414,27 @@ onUnmounted(() => { clearInterval(intervalId); });
   .mision-vision-item p {
     font-size: 0.9rem;
     line-height: 1.5;
+  }
+  
+  /* Estilos móvil para viñetas */
+  .empresa-highlights {
+    margin-bottom: 1.5rem;
+  }
+  .empresa-highlights h4 {
+    font-size: 1rem;
+    padding-left: 10px;
+  }
+  .highlights-list li {
+    font-size: 0.85rem;
+    padding-left: 22px;
+    margin-bottom: 10px;
+  }
+  .highlights-list li::before {
+    font-size: 0.7rem;
+  }
+  .closing-statement {
+    font-size: 0.9rem;
+    padding: 12px;
   }
   .carousel-control {
     padding: 8px 12px;
