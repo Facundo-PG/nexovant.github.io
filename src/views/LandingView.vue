@@ -1,14 +1,21 @@
 <script setup>
 import { onMounted, onUnmounted } from 'vue';
+import { useRouter } from 'vue-router';
 
 // Imagen desde public usando BASE_URL dinámico
 const coverImage = import.meta.env.BASE_URL + 'images/cover.png';
+const router = useRouter();
 
-// Control dinámico del scroll
+// Control dinámico del scroll y redirect automático
 onMounted(() => {
   // Ocultar scroll solo cuando este componente está activo
   document.documentElement.style.overflow = 'hidden';
   document.body.style.overflow = 'hidden';
+  
+  // Redireccionar automáticamente después de 4 segundos
+  setTimeout(() => {
+    router.push('/home');
+  }, 4000);
 });
 
 onUnmounted(() => {
@@ -21,10 +28,7 @@ onUnmounted(() => {
 <template>
   <div class="landing-container" :style="{ '--cover-image': `url(${coverImage})` }">
     <div class="background-image"></div>
-
-    <div class="content">
-      <router-link to="/home" class="enter-button">ENTRAR</router-link>
-    </div>
+    <!-- Eliminamos el botón, ahora es solo un splash screen -->
   </div>
 </template>
 
@@ -64,82 +68,6 @@ onUnmounted(() => {
   height: 100%;
 }
 
-/* CONTENIDO SUPERIOR */
-.content {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 8%;
-  z-index: 2;
-}
-
-/* BOTÓN */
-.enter-button {
-  background-color: #ffffff;
-  color: #8A2BE2;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 15px 40px;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.enter-button:hover {
-  background-color: #f0f0f0;
-  transform: scale(1.05);
-}
-
-/* ========================= */
-/* ====== RESPONSIVE ======= */
-/* ========================= */
-
-@media (max-width: 1024px) {
-  .enter-button {
-    font-size: 1.1rem;
-    padding: 14px 35px;
-  }
-}
-
-@media (max-width: 768px) {
-  .content {
-    padding-bottom: 12%;
-  }
-}
-
-@media (max-width: 480px) {
-  .content {
-    padding-bottom: 25%;
-  }
-  .enter-button {
-    font-size: 1rem;
-    padding: 12px 30px;
-  }
-}
-
-@media (max-width: 390px) {
-  .content {
-    padding-bottom: 30%;
-  }
-  .enter-button {
-    font-size: 0.9rem;
-    padding: 10px 25px;
-  }
-}
-
-@media (max-width: 320px) {
-  .content {
-    padding-bottom: 35%;
-  }
-  .enter-button {
-    font-size: 0.8rem;
-    padding: 8px 20px;
-  }
-}
+/* Splash screen - solo muestra la imagen por 4 segundos */
 
 </style>
