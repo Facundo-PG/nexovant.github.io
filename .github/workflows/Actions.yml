@@ -1,31 +1,13 @@
 # Nombre del Workflow
 name: Deploy Vue site to Pages
-
-# Define cuándo se ejecuta (en cada push a la rama main)
-on:
-  push:
-    branches: ["main"]
-  # Permite ejecutar el workflow manualmente desde la pestaña Actions
-  workflow_dispatch:
-
-# Permisos
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
+# ... [otras secciones] ...
 jobs:
   build:
     runs-on: ubuntu-latest
     
-    # ==========================================================
-    # === CRÍTICO: Definir la carpeta de trabajo (Subdirectorio) ===
-    # Esto le dice a GitHub que ejecute todos los pasos 'npm' 
-    # desde la carpeta donde está el package.json (NexoVant).
     defaults:
       run:
         working-directory: NexoVant
-    # ==========================================================
     
     steps:
     - name: Checkout
@@ -36,22 +18,22 @@ jobs:
       with:
         node-version: 20
         cache: 'npm'
-        cache-dependency-path: NexoVant/package-lock.json # Usar el lock file dentro del subdirectorio
+        # === CORRECCIÓN: La ruta es ahora relativa a 'NexoVant' ===
+        cache-dependency-path: package-lock.json 
       
     - name: Install dependencies
-      # Se ejecuta dentro de NexoVant gracias a 'working-directory'
       run: npm install
       
     - name: Build project
-      # Se ejecuta dentro de NexoVant gracias a 'working-directory'
       run: npm run build
       
-    # ==========================================================
-    # === CRÍTICO: Subir el artefacto desde la carpeta 'dist' del subdirectorio ===
     - name: Upload production artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        # La carpeta 'dist' se encuentra en NexoVant/dist
+        # CORRECCIÓN: La ruta es ahora relativa a la raíz del repositorio
+        # donde se ejecutó el build (NexoVant/dist). 
+        # Pero si el working-directory está seteado, la ruta del artefacto 
+        # debe ser absoluta o ajustarse, por seguridad volvemos a la ruta completa:
         path: NexoVant/dist 
         
   deploy:
