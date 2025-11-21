@@ -10,7 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
-  base: '/nexovant/',
+  base: 'nexovant-frontend/nexovant/',
   server: {
     port: 3000,
   },
