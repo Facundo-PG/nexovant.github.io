@@ -27,10 +27,15 @@ html {
 /* Estilos encapsulados para este componente */
 .landing-container {
   position: relative;
-  width: 95vw; /* Hacer más angosta para que el título no se corte */
+  width: 100vw;
   height: 100vh;
-  margin: 0 auto; /* Centrar el contenedor */
   overflow: hidden; /* Esto también ayuda a asegurar que no haya scroll DENTRO del componente */
+}
+@media (max-width: 480px) {
+  .landing-container {
+    width: 85vw; /* Un poco más angosta en móviles */
+    margin: 0 auto;
+  }
 }
 .background-image {
   width: 100%;
