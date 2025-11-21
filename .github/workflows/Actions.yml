@@ -26,13 +26,24 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: 'npm'
+
+      - name: Clear npm cache
+        run: npm cache clean --force
+
+      - name: Remove node_modules and package-lock
+        run: rm -rf node_modules package-lock.json
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm install
 
-      - name: Build
+      - name: Remove dist folder
+        run: rm -rf dist
+
+      - name: Build with verbose output
         run: npm run build
+
+      - name: List build output
+        run: ls -la dist/ && ls -la dist/assets/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
@@ -42,4 +53,3 @@ jobs:
           force_orphan: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
-          cname: false
