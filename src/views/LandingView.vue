@@ -44,7 +44,7 @@ html {
 }
 @media (max-width: 480px) {
   .background-image {
-    object-fit: contain; /* Cambiar a contain para que se vea completa */
+    object-fit: cover; /* Mantener cover para imagen de tamaño normal */
     object-position: center;
   }
 }

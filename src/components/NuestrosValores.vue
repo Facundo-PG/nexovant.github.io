@@ -16,6 +16,8 @@
 <style scoped>
 .section-container {
   padding: 80px 40px;
+  min-height: 100vh; /* Asegurar altura mínima */
+  color: white;
 }
 .valores-bg {
   background-color: #2c2c54;
@@ -23,11 +25,13 @@
 .section-subtitle {
   font-size: 1.5rem;
   font-weight: 300;
+  color: #f0f0f0;
 }
 .section-title {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 20px;
+  color: #fff;
 }
 .content-wrapper-valores {
   max-width: 900px;
@@ -36,6 +40,8 @@
 }
 .content-wrapper-valores p {
   font-size: 1.1rem;
+  color: #f0f0f0;
+  line-height: 1.6;
 }
 ul {
   list-style: none;
@@ -49,5 +55,64 @@ li {
   margin-bottom: 10px;
   border-radius: 5px;
   font-size: 1.1rem;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-container {
+    padding: 60px 20px;
+    min-height: auto;
+  }
+  .section-title {
+    font-size: 2.5rem;
+  }
+  .section-subtitle {
+    font-size: 1.3rem;
+  }
+  .content-wrapper-valores p {
+    font-size: 1rem;
+  }
+  li {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-container {
+    padding: 40px 15px;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .section-subtitle {
+    font-size: 1.2rem;
+  }
+  .content-wrapper-valores p {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+  li {
+    font-size: 0.9rem;
+    padding: 10px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 320px) {
+  .section-container {
+    padding: 30px 10px;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .content-wrapper-valores p {
+    font-size: 0.85rem;
+  }
+  li {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
 }
 </style>
