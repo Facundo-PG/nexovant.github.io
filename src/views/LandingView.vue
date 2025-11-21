@@ -33,7 +33,7 @@ html {
 }
 @media (max-width: 480px) {
   .landing-container {
-    width: 85vw; /* Un poco más angosta en móviles */
+    width: 90vw; /* Un poco más angosta en móviles */
     margin: 0 auto;
   }
 }
