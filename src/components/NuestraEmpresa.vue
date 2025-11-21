@@ -4,7 +4,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 // Rutas dinámicas para las imágenes del carrusel
 const carouselImages = ref([
   import.meta.env.BASE_URL + "images/carousel-1.jpg",
-  import.meta.env.BASE_URL + "images/carousel-2.jpg",
+  import.meta.env.BASE_URL + "images/carousel-2.jpeg",
   import.meta.env.BASE_URL + "images/carousel-3.jpg",
 ]);
 const currentIndex = ref(0);
