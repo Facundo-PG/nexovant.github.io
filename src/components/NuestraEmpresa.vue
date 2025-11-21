@@ -1,12 +1,11 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
-// Rutas correctas para GitHub Pages
-// import.meta.env.BASE_URL = "/nexovant/"
+// Rutas directas para GitHub Pages
 const carouselImages = ref([
-  import.meta.env.BASE_URL + "images/carousel-1.jpg",
-  import.meta.env.BASE_URL + "images/carousel-2.webp",
-  import.meta.env.BASE_URL + "images/carousel-3.png",
+  "/nexovant/images/carousel-1.jpg",
+  "/nexovant/images/carousel-2.webp",
+  "/nexovant/images/carousel-3.png",
 ]);
 
 const currentIndex = ref(0);
