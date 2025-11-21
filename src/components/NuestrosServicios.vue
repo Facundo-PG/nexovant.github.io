@@ -106,7 +106,7 @@
 }
 .servicios-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto en desktop */
   gap: 30px;
   max-width: 1200px;
   margin: auto;
@@ -177,21 +177,34 @@
 }
 
 /* Responsive Design */
+/* Pantallas grandes - 4 columnas */
 @media (max-width: 1200px) {
   .section-container {
     padding: 70px 40px;
   }
   .servicios-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* Mantener 4 columnas */
+    gap: 25px;
+    max-width: 1100px;
+  }
+  .service-card {
+    height: 280px;
+  }
+}
+
+/* Tablets grandes - 2x2 grid */
+@media (max-width: 1100px) {
+  .servicios-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 30px;
-    max-width: 1000px;
+    max-width: 800px;
   }
   .service-card {
     height: 300px;
   }
 }
 
-/* Tablets en landscape (1024px) */
+/* Tablets landscape - optimizado */  
 @media (max-width: 1024px) {
   .section-container {
     padding: 60px 35px;
@@ -204,13 +217,12 @@
     max-width: 700px;
   }
   .servicios-grid {
-    grid-template-columns: repeat(2, 1fr); /* Asegurar grid 2x2 */
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 25px;
-    max-width: 900px;
+    max-width: 750px;
   }
   .service-card {
     height: 280px;
-    max-width: none; /* Permitir que use el ancho completo del grid */
   }
   .card-front h3 {
     font-size: 1.3rem;
