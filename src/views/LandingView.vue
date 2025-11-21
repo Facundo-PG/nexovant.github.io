@@ -95,10 +95,10 @@ html {
     min-height: 500px;
   }
   .content {
-    padding-bottom: 8%;
+    padding-bottom: 15%; /* Más separación del fondo */
     padding-left: 20px;
     padding-right: 20px;
-    align-items: center; /* Centrar verticalmente */
+    align-items: flex-end; /* Volver a posición inferior */
   }
   .enter-button {
     font-size: 1rem;
@@ -112,6 +112,9 @@ html {
     height: 60vh;
     min-height: 450px;
   }
+  .content {
+    padding-bottom: 18%; /* Más separación en pantallas pequeñas */
+  }
   .enter-button {
     font-size: 0.9rem;
     padding: 10px 25px;
@@ -122,6 +125,9 @@ html {
   .landing-container {
     height: 55vh;
     min-height: 400px;
+  }
+  .content {
+    padding-bottom: 20%; /* Máxima separación en pantallas muy pequeñas */
   }
   .enter-button {
     font-size: 0.8rem;
