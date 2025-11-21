@@ -94,7 +94,14 @@ li:hover::before {
 }
 
 /* Asegurar que el texto esté por encima del efecto */
-li strong, li:not(strong) {
+li strong,
+li {
+  position: relative;
+  z-index: 2;
+}
+
+/* Específicamente para el contenido de texto */
+li * {
   position: relative;
   z-index: 2;
 }
