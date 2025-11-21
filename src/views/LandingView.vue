@@ -41,7 +41,7 @@ html {
   width: 100%;
   height: 100%;
   background-image: var(--cover-image);
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 1;
