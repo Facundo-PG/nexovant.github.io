@@ -1,12 +1,13 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
-// Rutas dinámicas para GitHub Pages
+// --- Rutas de imágenes desde /public/images (NO se importan) ---
 const carouselImages = ref([
   import.meta.env.BASE_URL + "images/carousel-1.jpg",
   import.meta.env.BASE_URL + "images/carousel-2.webp",
   import.meta.env.BASE_URL + "images/carousel-3.png",
 ]);
+// ---------------------------------------------------------------
 
 const currentIndex = ref(0);
 let intervalId = null;
@@ -86,7 +87,6 @@ onUnmounted(() => {
               con la confiabilidad y la excelencia.
             </p>
           </div>
-
           <div class="mision-vision-item">
             <h3>Visión</h3>
             <p>
@@ -104,5 +104,5 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-/* Tu CSS original va aquí! No lo alteré para no romper estilos */
+/* (tu CSS permanece sin cambios) */
 </style>
