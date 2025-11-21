@@ -1,20 +1,12 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
-// --- Tus imágenes ---
-// --- Tus imágenes ---
-// --- Tus imágenes ---
-import carouselImg1 from '@/assets/images/carousel-1.jpg';
-import carouselImg2 from '@/assets/images/carousel-2.webp';
-import carouselImg3 from '@/assets/images/carousel-3.png';
-// --------------------
-
-// --------------------
-
-// --------------------
-
-
-const carouselImages = ref([carouselImg1, carouselImg2, carouselImg3]);
+// Rutas dinámicas para las imágenes del carrusel
+const carouselImages = ref([
+  import.meta.env.BASE_URL + "images/carousel-1.jpg",
+  import.meta.env.BASE_URL + "images/carousel-2.webp",
+  import.meta.env.BASE_URL + "images/carousel-3.png",
+]);
 const currentIndex = ref(0);
 let intervalId = null;
 
