@@ -204,11 +204,13 @@
     max-width: 700px;
   }
   .servicios-grid {
+    grid-template-columns: repeat(2, 1fr); /* Asegurar grid 2x2 */
     gap: 25px;
     max-width: 900px;
   }
   .service-card {
     height: 280px;
+    max-width: none; /* Permitir que use el ancho completo del grid */
   }
   .card-front h3 {
     font-size: 1.3rem;
@@ -237,10 +239,12 @@
     max-width: 600px;
   }
   .servicios-grid {
+    grid-template-columns: repeat(2, 1fr); /* Asegurar grid 2x2 */
     gap: 20px;
   }
   .service-card {
     height: 260px;
+    max-width: none;
   }
   .card-front h3 {
     font-size: 1.2rem;
