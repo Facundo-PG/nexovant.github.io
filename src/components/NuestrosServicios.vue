@@ -54,9 +54,13 @@
         <div class="card-inner">
           <div class="card-front">
             <div class="servicio-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M8.25 21V3m8.25 18V3M3.75 6h16.5m-16.5 6h16.5m-16.5 6h16.5" />
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 21h16"/>
+    <path d="M6 12v9"/>
+    <path d="M18 12v9"/>
+    <path d="M10 3l-4 8h12l-4-8"/>
+    <path d="M12 3v9"/>
+</svg>
             </div>
             <h3>INSTALACIONES</h3>
           </div>
