@@ -15,7 +15,7 @@ onMounted(() => {
   // Redireccionar automáticamente después de 4 segundos
   setTimeout(() => {
     router.push('/home');
-  }, 4000);
+  }, 3000);
 });
 
 onUnmounted(() => {
