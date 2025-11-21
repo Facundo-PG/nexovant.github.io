@@ -1,12 +1,11 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
-// --- Tus imágenes ---
-import carouselImg1 from '@/assets/images/carousel-1.jpg';
-import carouselImg2 from '@/assets/images/carousel-2.webp';
-import carouselImg3 from '@/assets/images/carousel-3.png';
+// --- Imágenes desde carpeta public con base path ---
+const carouselImg1 = '/nexovant/images/carousel-1.jpg';
+const carouselImg2 = '/nexovant/images/carousel-2.webp';
+const carouselImg3 = '/nexovant/images/carousel-3.png';
 // --------------------
-
 
 const carouselImages = ref([carouselImg1, carouselImg2, carouselImg3]);
 const currentIndex = ref(0);

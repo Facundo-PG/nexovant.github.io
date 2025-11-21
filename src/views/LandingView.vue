@@ -1,6 +1,6 @@
 <script setup>
-// Asegúrate de que esta es la imagen correcta que quieres usar
-import coverImage from '@/assets/images/cover.png'; // Usando la última imagen que creamos
+// Imagen desde carpeta public
+const coverImage = '/nexovant/images/cover.png';
 </script>
 
 <template>
