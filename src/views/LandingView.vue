@@ -91,14 +91,14 @@ html {
 
 @media (max-width: 480px) {
   .landing-container {
-    height: 70vh; /* Mucho más pequeño en móviles */
-    min-height: 500px;
+    height: 100vh; /* Ocupar toda la pantalla */
+    min-height: 100vh;
   }
   .content {
-    padding-bottom: 15%; /* Más separación del fondo */
+    padding-bottom: 25%; /* Mucho más abajo */
     padding-left: 20px;
     padding-right: 20px;
-    align-items: flex-end; /* Volver a posición inferior */
+    align-items: flex-end;
   }
   .enter-button {
     font-size: 1rem;
@@ -109,11 +109,11 @@ html {
 
 @media (max-width: 390px) {
   .landing-container {
-    height: 60vh;
-    min-height: 450px;
+    height: 100vh; /* Ocupar toda la pantalla */
+    min-height: 100vh;
   }
   .content {
-    padding-bottom: 18%; /* Más separación en pantallas pequeñas */
+    padding-bottom: 30%; /* Aún más abajo */
   }
   .enter-button {
     font-size: 0.9rem;
@@ -123,11 +123,11 @@ html {
 
 @media (max-width: 320px) {
   .landing-container {
-    height: 55vh;
-    min-height: 400px;
+    height: 100vh; /* Ocupar toda la pantalla */
+    min-height: 100vh;
   }
   .content {
-    padding-bottom: 20%; /* Máxima separación en pantallas muy pequeñas */
+    padding-bottom: 35%; /* Máxima separación del fondo */
   }
   .enter-button {
     font-size: 0.8rem;
