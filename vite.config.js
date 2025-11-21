@@ -1,21 +1,24 @@
 import { defineConfig } from 'vite';
+// Si usas React, necesitas este import
+// import react from '@vitejs/plugin-react'; 
 
-// La ruta base es correcta
 const REPO_NAME = '/nexovant/'; 
 
 export default defineConfig({
   base: REPO_NAME, 
-  
-  // Si usas React, descomenta esta línea:
-  // plugins: [react()], 
+  // plugins: [react()], // Descomenta si usas React
   
   build: {
-    // 💥 ESTO ELIMINA LA CARPETA 'assets' EN EL BUILD FINAL 💥
+    // Definimos el directorio de salida (ya está correcto)
+    outDir: 'dist', 
+    
+    // Configuración Rollup para renombrar y aplanar
     rollupOptions: {
       output: {
-        assetFileNames: `[name].[ext]`,
-        chunkFileNames: `[name].[ext]`,
-        entryFileNames: `[name].js`
+        // Asegura que los archivos JS/CSS vayan al root de dist
+        assetFileNames: 'index.css', // Forzamos el nombre final del CSS
+        chunkFileNames: 'index.js',
+        entryFileNames: 'index.js' // Forzamos el nombre final del JS
       }
     }
   }
