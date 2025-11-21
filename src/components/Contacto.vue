@@ -77,16 +77,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
+  background: linear-gradient(135deg, #6a1b9a 0%, #8e24aa 50%, #ab47bc 100%);
 }
 .contact-wrapper {
   display: flex;
   max-width: 1000px;
   width: 100%;
-  background: rgba(138, 43, 226, 0.5);
+  background: #2c2c54;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 15px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
   overflow: hidden;
 }
 .info-side {

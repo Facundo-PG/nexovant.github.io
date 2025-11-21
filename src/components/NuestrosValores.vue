@@ -5,13 +5,9 @@
       <h1 class="section-title">VALORES</h1>
       <p>En un mercado dinámico y competitivo, Nexovant se distingue por una propuesta de valor sólida y centrada en las necesidades de nuestros clientes:</p>
       <ul>
-        <li><strong>Servicio integral "end-to-end":</strong> Incluye desde la obra civil hasta la puesta en marcha y gestión completa de proyectos.</li>
+        <li><strong>Servicio integral “end-to-end”:</strong> Incluye desde la obra civil hasta la puesta en marcha y gestión completa de proyectos.</li>
         <li><strong>Cercanía y la excelencia:</strong> Con un trato personalizado y acompañamiento en todo el ciclo de vida de cada proyecto.</li>
         <li><strong>Equipo altamente calificado y tecnología adecuada:</strong> Lo que asegura una ejecución eficiente, segura y de calidad.</li>
-        <li><strong>Innovación constante:</strong> Nos mantenemos a la vanguardia de la tecnología para ofrecer soluciones de telecomunicaciones modernas, eficientes y adaptadas a las necesidades de nuestros clientes.</li>
-        <li><strong>Compromiso con la seguridad:</strong> Garantizamos que todos nuestros servicios y sistemas cumplan con los más altos estándares de seguridad, protegiendo la información y la infraestructura de nuestros clientes.</li>
-        <li><strong>Sostenibilidad y responsabilidad:</strong> Integramos prácticas sostenibles en todos nuestros proyectos, cuidando el medio ambiente y promoviendo un impacto positivo en la comunidad.</li>
-        <li><strong>Excelencia en el soporte al cliente:</strong> Brindamos atención rápida, clara y efectiva, asegurando que cada cliente reciba asistencia personalizada en cualquier momento.</li>
       </ul>
     </div>
   </section>
