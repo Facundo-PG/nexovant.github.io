@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     
-    <!-- 🟢 Cambiamos a ruta relativa: Vite la corregirá a /nexovant/favicon.ico -->
-    <link rel="icon" href="./favicon.ico"> 
+    <!-- La ruta relativa para el favicon. Vite lo maneja correctamente. -->
+    <link rel="icon" href="/nexovant/index.css"> 
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
-    
-    <!-- 🔴 ELIMINADAS: Estas líneas serán inyectadas por Vite durante el build -->
-    <!-- <script type="module" crossorigin src="/assets/index-Bs15kyjs.js"></script> -->
-    <!-- <link rel="stylesheet" crossorigin href="/assets/index-BKdh9wWH.css"> -->
+    <script type="module" crossorigin src="/nexovant/index.js"></script>
+    <link rel="stylesheet" crossorigin href="/nexovant/index7.css">
   </head>
   <body>
-    <!-- El script principal del proyecto (main.js o main.tsx) se inyecta aquí. -->
     <div id="app"></div>
-
-    <!-- Asegúrate de que tu punto de entrada principal se cargue correctamente si no usas React/Vue -->
-    <!-- Si usas frameworks, esto lo inyecta el plugin o la directiva del framework. -->
+    
+    <!-- 🟢 PUNTO DE ENTRADA: Esta línea es CRÍTICA. Le dice a Vite qué código debe agrupar. -->
+    <!-- Asegúrate de que la ruta y extensión (ej. .jsx, .ts, .js) sea la correcta. --> 
   </body>
 </html>

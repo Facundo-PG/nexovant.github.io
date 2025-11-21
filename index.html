@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
+    
+    <!-- La ruta relativa para el favicon. Vite lo maneja correctamente. -->
+    <link rel="icon" href="./favicon.ico"> 
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
-    <script type="module" crossorigin src="/assets/index-Bs15kyjs.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BKdh9wWH.css">
   </head>
   <body>
     <div id="app"></div>
-
+    
+    <!-- 🟢 PUNTO DE ENTRADA: Esta línea es CRÍTICA. Le dice a Vite qué código debe agrupar. -->
+    <!-- Asegúrate de que la ruta y extensión (ej. .jsx, .ts, .js) sea la correcta. -->
+    <script type="module" src="/src/main.js"></script> 
   </body>
 </html>
