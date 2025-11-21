@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Puedes ajustar la versión de Node.js según tu proyecto
+          node-version: '22' # Versión de Node.js actualizada
 
       # 3. Instala las dependencias del proyecto
       - name: Install Dependencies
@@ -39,4 +39,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # El directorio que contiene los archivos de producción
+          publish_dir: ./dist
