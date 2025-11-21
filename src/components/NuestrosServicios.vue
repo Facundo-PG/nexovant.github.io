@@ -192,8 +192,8 @@
   }
 }
 
-/* Tablets grandes - 2x2 grid */
-@media (max-width: 1100px) {
+/* Solo tablets - 2x2 grid (cambiar breakpoint a 1024px máximo) */
+@media (max-width: 1024px) {
   .servicios-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 30px;
@@ -204,8 +204,8 @@
   }
 }
 
-/* Tablets landscape - optimizado */  
-@media (max-width: 1024px) {
+/* Tablets landscape específico - ajustes adicionales */  
+@media (max-width: 1024px) and (min-width: 901px) {
   .section-container {
     padding: 60px 35px;
   }
@@ -217,7 +217,6 @@
     max-width: 700px;
   }
   .servicios-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
     gap: 25px;
     max-width: 750px;
   }
