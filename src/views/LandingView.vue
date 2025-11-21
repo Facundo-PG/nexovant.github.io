@@ -41,10 +41,20 @@ html {
   width: 100%;
   height: 100%;
   background-image: var(--cover-image);
-  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #0b2545; /* Color de fondo por si acaso */
   z-index: 1;
+
+  /* --- LA MAGIA ESTÁ AQUÍ --- */
+
+  /* 1. Por defecto, para pantallas anchas (PC), usamos 'cover' */
+  background-size: cover;
+
+  /* 2. Para pantallas verticales (celulares), aplicamos un 'zoom' manual */
+  @media (orientation: portrait) {
+    background-size: 170% auto; /* Juega con este valor */
+  }
 }
 
 /* CONTENIDO SUPERIOR */
