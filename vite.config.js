@@ -10,10 +10,10 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
-  base: '/nexovant.github.io/',
+  base: '/',
   server: {
-  port: Number(process.env.VITE_PORT),
-},
+    port: 3000,
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
