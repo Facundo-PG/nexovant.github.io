@@ -35,7 +35,6 @@ onUnmounted(() => {
 /* CONTENEDOR PRINCIPAL */
 .landing-container {
   position: relative;
-  width: 95vw; /* Más angosto para que el título no se corte */
   height: 100vh;
   width: 100vw;
   margin: 0 auto; /* Centrar */
