@@ -29,13 +29,11 @@ onUnmounted(() => {
 </template>
 
 <!-- Eliminamos el CSS global que bloqueaba el scroll en toda la app -->
-
 <style scoped>
 
 /* CONTENEDOR PRINCIPAL */
 .landing-container {
   position: relative;
-  /* Usamos 100dvh para que la altura se ajuste dinámicamente en móviles */
   height: 100dvh;
   width: 100vw;
   margin: 0;
@@ -48,17 +46,15 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   width: 100%;
-  /* Usamos 100dvh también aquí para asegurar que el fondo cubra el contenedor */
   height: 100dvh;
   background-image: var(--cover-image);
-  background-position: center;
+  /* --- AJUSTE AQUÍ --- */
+  background-position: 60% center; /* Juega con el valor 60% para un ajuste fino */
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #0b2545;
   z-index: -1;
 }
-
-/* Eliminamos el media query para orientation: portrait que ya no es necesario con 'cover' */
 
 /* Asegúrate de que el body y html no tengan márgenes */
 :global(body, html) {
