@@ -56,14 +56,14 @@ onUnmounted(() => {
   z-index: -1; /* Coloca el fondo detrás de otros contenidos */
 }
 
-/* Opcional: Asegúrate de que el body no tenga márgenes */
-
-
-  /* 2. Para pantallas verticales (celulares), aplicamos un 'zoom' manual */
+/* 2. Para pantallas verticales (celulares), aplicamos un 'zoom' manual */
+.background-image {
   @media (orientation: portrait) {
     background-size: 180% auto; /* Juega con este valor */
   }
+}
 
+/* Opcional: Asegúrate de que el body no tenga márgenes */
 body, html {
   margin: 0;
   padding: 0;
