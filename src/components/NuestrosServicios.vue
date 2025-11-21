@@ -267,22 +267,120 @@
     gap: 15px;
   }
   .service-card {
-    height: 220px;
+    height: 240px; /* Aumentar altura para más espacio de texto */
+  }
+  .card-front, .card-back {
+    padding: 12px; /* Reducir padding para más espacio */
   }
   .card-front h3 {
-    font-size: 1rem;
-    min-height: 2.5rem;
+    font-size: 0.9rem;
+    min-height: 2.2rem;
+    line-height: 1.1;
   }
   .servicio-icon {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 8px;
   }
   .servicio-icon svg {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
   }
-  .card-back h3 { font-size: 0.9rem; }
-  .card-back p { font-size: 0.8rem; }
-  .stat-number { font-size: 2rem; }
+  .card-back h3 { 
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    line-height: 1.1;
+    letter-spacing: 0.5px; /* Reducir espaciado entre letras */
+  }
+  .card-back p { 
+    font-size: 0.75rem;
+    line-height: 1.3;
+    padding: 0 5px; /* Menos padding lateral */
+  }
+  .stat-number { 
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+}
+
+/* MÓVILES MUY PEQUEÑOS */
+@media (max-width: 390px) {
+  .service-card {
+    height: 220px;
+  }
+  .card-front, .card-back {
+    padding: 10px;
+  }
+  .card-front h3 {
+    font-size: 0.85rem;
+    min-height: 2rem;
+  }
+  .servicio-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 6px;
+  }
+  .servicio-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+  .card-back h3 { 
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+  .card-back p { 
+    font-size: 0.7rem;
+    line-height: 1.25;
+    padding: 0 3px;
+  }
+  .stat-number { 
+    font-size: 1.6rem;
+  }
+  .stat-label {
+    font-size: 0.75rem;
+  }
+}
+
+/* MÓVILES EXTRA PEQUEÑOS */
+@media (max-width: 320px) {
+  .service-card {
+    height: 200px;
+  }
+  .card-front, .card-back {
+    padding: 8px;
+  }
+  .card-front h3 {
+    font-size: 0.8rem;
+    min-height: 1.8rem;
+  }
+  .servicio-icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 4px;
+  }
+  .servicio-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+  .card-back h3 { 
+    font-size: 0.7rem;
+    margin-bottom: 4px;
+    letter-spacing: 0.3px;
+  }
+  .card-back p { 
+    font-size: 0.65rem;
+    line-height: 1.2;
+    padding: 0 2px;
+  }
+  .stat-number { 
+    font-size: 1.4rem;
+  }
+  .stat-label {
+    font-size: 0.7rem;
+  }
 }
 </style>
