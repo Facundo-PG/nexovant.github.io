@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-const logoImage = '/nexovant/images/logo.jpg'; // Imagen desde carpeta public
+import logoImage from '@/assets/images/logo.jpg'; // Revisa que esta ruta sea la correcta para tu logo
 
 const isMenuOpen = ref(false);
 const toggleMenu = () => {
