@@ -211,16 +211,16 @@
     margin-bottom: 30px;
   }
   .servicios-grid {
-    grid-template-columns: 1fr;
-    gap: 20px; /* Más gap entre tarjetas */
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid para mostrar las 4 cards */
+    gap: 15px; /* Gap más pequeño para que quepan bien */
     max-width: 100%;
     width: 100%;
     padding: 0 10px; /* Padding interno del grid */
   }
   .service-card {
-    height: 260px;
-    max-width: 320px; /* Un poco más pequeña */
-    margin: 0 auto;
+    height: 220px; /* Altura más pequeña para que quepan bien */
+    max-width: none; /* Permitir que se ajuste al grid */
+    margin: 0;
     width: 100%; /* Asegurar que use todo el ancho disponible */
   }
 }
@@ -240,42 +240,43 @@
     padding: 0 5px;
   }
   .servicios-grid {
+    grid-template-columns: repeat(2, 1fr); /* Mantener 2x2 */
     padding: 0 5px; /* Padding del grid */
-    gap: 18px;
+    gap: 12px; /* Gap más pequeño */
   }
   .service-card {
-    height: 240px;
-    max-width: 290px; /* Un poco más pequeña para evitar corte */
-    width: calc(100% - 10px); /* Asegurar margen */
+    height: 180px; /* Altura más pequeña */
+    max-width: none;
+    width: 100%;
   }
   .card-front, .card-back {
-    padding: 12px; /* Menos padding interno */
+    padding: 8px; /* Menos padding interno */
   }
   .card-front h3 {
-    font-size: 1rem; /* Un poco más pequeño */
-    min-height: 2.2rem;
+    font-size: 0.85rem; /* Texto más pequeño */
+    min-height: 2rem;
     line-height: 1.1;
   }
   .servicio-icon {
-    width: 55px;
-    height: 55px;
-    margin-bottom: 12px;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 8px;
   }
   .servicio-icon svg {
-    width: 32px;
-    height: 32px;
+    width: 26px;
+    height: 26px;
   }
   .stat-number {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .card-back h3 {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
   }
   .card-back p {
-    font-size: 0.85rem;
-    line-height: 1.3;
-    padding: 0 5px;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    padding: 0 3px;
   }
 }
 
@@ -284,38 +285,77 @@
     padding: 25px 10px;
   }
   .servicios-grid {
-    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 5px;
   }
   .service-card {
-    height: 220px;
-    max-width: 270px;
-    width: calc(100% - 20px); /* Más margen lateral */
+    height: 160px; /* Más pequeña */
+    max-width: none;
+    width: 100%;
   }
   .section-title {
     font-size: 1.6rem;
+  }
+  .card-front h3 {
+    font-size: 0.75rem;
+    min-height: 1.8rem;
+  }
+  .servicio-icon {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 6px;
+  }
+  .servicio-icon svg {
+    width: 20px;
+    height: 20px;
   }
 }
 
 @media (max-width: 320px) {
   .section-container {
-    padding: 20px 8px;
+    padding: 20px 5px;
   }
   .section-title {
     font-size: 1.4rem;
   }
+  .servicios-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0 3px;
+  }
   .service-card {
-    height: 200px;
-    max-width: 250px;
-    width: calc(100% - 16px);
+    height: 140px; /* Más pequeña */
+    max-width: none;
+    width: 100%;
   }
   .card-front h3 {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+    min-height: 1.5rem;
   }
   .stat-number {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
   .card-front, .card-back {
-    padding: 10px;
+    padding: 6px;
+  }
+  .servicio-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 4px;
+  }
+  .servicio-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  .card-back h3 {
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+  }
+  .card-back p {
+    font-size: 0.65rem;
+    line-height: 1.1;
+    padding: 0 2px;
   }
 }
 </style>
