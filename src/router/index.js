@@ -3,14 +3,19 @@ import { createRouter, createWebHistory } from 'vue-router';
 import LandingView from '@/views/LandingView.vue'; 
 import HomeView from '@/views/HomeView.vue'; // Ejemplo
 
-// 🛑 CRÍTICO: La base del historial debe ser el nombre del repositorio ('/nexovant/').
-// Esto soluciona el problema de subdirectorio de GitHub Pages.
+// 🛑 SOLUCIÓN CONDICIONAL: Forzamos la base del repositorio si estamos en el entorno de producción (npm run build).
+// Esto soluciona el error malformado de URL que persiste en GitHub Pages.
+const VUE_ROUTER_BASE = import.meta.env.PROD 
+  ? '/nexovant/' // Si es producción (build), usa la base explícita del repositorio.
+  : import.meta.env.BASE_URL; // Si es desarrollo, usa la base de Vite por defecto.
+
 const router = createRouter({
-  history: createWebHistory('/nexovant/'), // <-- CORREGIDO
+  // Usamos la base condicional para el historial.
+  history: createWebHistory(VUE_ROUTER_BASE),
   
   routes: [
     {
-      // La ruta raíz de la aplicación (que en el navegador es /nexovant/)
+      // La ruta principal, que resuelve a /nexovant/
       path: '/', 
       name: 'Landing',
       component: LandingView 
