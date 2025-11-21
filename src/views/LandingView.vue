@@ -49,7 +49,7 @@ onUnmounted(() => {
   height: 100dvh;
   background-image: var(--cover-image);
   /* --- AJUSTE AQUÍ --- */
-  background-position: 45% center; /* Juega con el valor 60% para un ajuste fino */
+  background-position: 47% center; /* Juega con el valor 60% para un ajuste fino */
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #0b2545;
