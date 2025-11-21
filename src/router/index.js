@@ -1,6 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import LandingView from '@../views/LandingView.vue';
-import HomeView from '@../views/HomeView.vue';
+
+// Corregido: Se eliminó el '../' que era incorrecto.
+// El alias '@' ya apunta directamente a la carpeta 'src'.
+import LandingView from '@/views/LandingView.vue'; 
+import HomeView from '@/views/Homeview.vue';
 
 // 1. Definimos las rutas
 const routes = [
@@ -17,6 +20,7 @@ const routes = [
 ];
 
 // 2. Creamos la instancia del router
+// La configuración de history: createWebHistory() funciona correctamente.
 const router = createRouter({
   history: createWebHistory(),
   routes,
