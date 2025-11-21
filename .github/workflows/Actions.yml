@@ -1,61 +1,66 @@
-name: Deploy Vue.js app to GitHub Pages
+# Nombre del Workflow
+name: Deploy Vue site to Pages
 
-# Define cuándo se ejecutará este workflow
+# Define cuándo se ejecuta (en cada push a la rama main)
 on:
   push:
-    # Se ejecuta solo cuando se suben cambios (push) a la rama 'main'
-    branches: [ main ]
-  # Esto permite la ejecución manual desde la pestaña 'Actions'
+    branches: ["main"]
+  # Permite ejecutar el workflow manualmente desde la pestaña Actions
   workflow_dispatch:
 
-# Permisos necesarios para publicar en GitHub Pages
+# Permisos
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Define los trabajos (jobs) que se ejecutarán
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    # ==========================================================
+    # === CRÍTICO: Definir la carpeta de trabajo (Subdirectorio) ===
+    # Esto le dice a GitHub que ejecute todos los pasos 'npm' 
+    # desde la carpeta donde está el package.json (NexoVant).
+    defaults:
+      run:
+        working-directory: NexoVant
+    # ==========================================================
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: 'npm'
+        cache-dependency-path: NexoVant/package-lock.json # Usar el lock file dentro del subdirectorio
+      
+    - name: Install dependencies
+      # Se ejecuta dentro de NexoVant gracias a 'working-directory'
+      run: npm install
+      
+    - name: Build project
+      # Se ejecuta dentro de NexoVant gracias a 'working-directory'
+      run: npm run build
+      
+    # ==========================================================
+    # === CRÍTICO: Subir el artefacto desde la carpeta 'dist' del subdirectorio ===
+    - name: Upload production artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        # La carpeta 'dist' se encuentra en NexoVant/dist
+        path: NexoVant/dist 
+        
+  deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
     steps:
-      - name: Checkout repository
-        # Acción para descargar el código
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        # Configura Node.js (se recomienda usar una versión LTS, como 20.x)
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.x
-          cache: 'npm'
-      
-      - name: Install dependencies
-        # Instala dependencias (npm ci es más seguro para CI)
-        run: npm ci
-
-      - name: Build project
-        # Ejecuta el script de compilación (npm run build)
-        # Esto generará la carpeta 'dist/'
-        run: npm run build
-
-      - name: Setup Pages
-        # Configura el entorno de GitHub Pages
-        uses: actions/configure-pages@v4
-        with:
-          # Define el directorio que contiene los archivos estáticos listos para desplegar
-          static_site_generator: vite
-
-      - name: Upload artifact
-        # Sube el contenido de la carpeta 'dist' como artefacto de despliegue
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './dist'
-          
-      - name: Deploy to GitHub Pages
-        id: deployment
-        # Despliega el artefacto subido a GitHub Pages
-        uses: actions/deploy-pages@v4
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
