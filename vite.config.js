@@ -1,38 +1,34 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueDevTools from 'vite-plugin-vue-devtools'
-import { fileURLToPath, URL } from 'node:url'
-// Si usas React, necesitas este import
-// import react from '@vitejs/plugin-react'; 
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue'; 
+import { fileURLToPath, URL } from 'node:url'; // Módulos de ruta para el alias
 
-const REPO_NAME = '/nexovant/'; 
+// Usamos './' para forzar rutas relativas (solución para GitHub Pages)
+const REPO_BASE = './'; 
 
 export default defineConfig({
-  plugins: [
-    vue(),
-    vueDevTools(),
-  ],
-  base: REPO_NAME, 
-  // plugins: [react()], // Descomenta si usas React
-  server: {
-    port: 3000,
-  },
+  // 1. Establecer la base de las rutas a './' (relativo)
+  base: REPO_BASE, 
+  
+  // 2. Activar el plugin de Vue
+  plugins: [vue()], 
+
+  // 3. Configuración de Resolución de Alias (para que @/ funcione)
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
-    },
+    }
   },
+  
+  // 4. Configuración CRÍTICA del build: Aplanamiento de la estructura
   build: {
-    // Definimos el directorio de salida (ya está correcto)
     outDir: 'dist', 
-    
-    // Configuración Rollup para renombrar y aplanar
     rollupOptions: {
       output: {
-        // Asegura que los archivos JS/CSS vayan al root de dist
-        assetFileNames: 'index.css', // Forzamos el nombre final del CSS
-        chunkFileNames: 'index.js',
-        entryFileNames: 'index.js' // Forzamos el nombre final del JS
+        // Establecer nombres de archivo para aplanar la estructura
+        // Los hashes seguirán existiendo, pero estarán directamente en 'dist/'
+        assetFileNames: '[name]-[hash].[ext]', 
+        chunkFileNames: '[name]-[hash].js',
+        entryFileNames: '[name]-[hash].js' 
       }
     }
   }
