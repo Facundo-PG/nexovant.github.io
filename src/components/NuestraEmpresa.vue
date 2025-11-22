@@ -108,8 +108,8 @@ onUnmounted(() => { clearInterval(intervalId); });
 
 .carousel-container {
   width: 100%;
-  height: 70vh; /* Altura aumentada para mejor proporción */
-  max-height: 800px;
+  height: 65vh;
+  max-height: 700px;
   position: relative;
   overflow: hidden;
 }
@@ -118,7 +118,7 @@ onUnmounted(() => { clearInterval(intervalId); });
 .carousel-image { 
   width: 100%; 
   height: 100%; 
-  object-fit: contain; 
+  object-fit: cover; 
   position: absolute; 
   top: 0; 
   left: 0;
