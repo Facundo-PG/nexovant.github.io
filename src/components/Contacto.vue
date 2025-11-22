@@ -186,7 +186,7 @@ const sendEmail = async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1a1a2e 0%, #2c2c54 50%, #3a3a6b 100%);
+  background: #2c2c54
 }
 .contact-wrapper {
   display: flex;
