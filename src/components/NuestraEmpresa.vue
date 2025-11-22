@@ -108,8 +108,8 @@ onUnmounted(() => { clearInterval(intervalId); });
 
 .carousel-container {
   width: 100%;
-  height: 55vh; /* Altura del carrusel, ligeramente reducida */
-  max-height: 600px;
+  height: 65vh; /* Altura del carrusel aumentada */
+  max-height: 700px;
   position: relative;
   overflow: hidden;
 }
@@ -125,16 +125,10 @@ onUnmounted(() => { clearInterval(intervalId); });
 }
 
 /* Posicionamiento específico para cada imagen del carousel */
-.carousel-image-1 {
-  object-position: center top; /* Primera imagen: mostrar parte superior */
-}
-
-.carousel-image-2 {
-  object-position: center center; /* Segunda imagen: centrada */
-}
-
+.carousel-image-1,
+.carousel-image-2,
 .carousel-image-3 {
-  object-position: center 40%; /* Tercera imagen: ligeramente superior al centro */
+  object-position: center center; /* Todas las imágenes centradas */
 }
 
 .fade-enter-active, .fade-leave-active { transition: opacity 0.8s ease; }
