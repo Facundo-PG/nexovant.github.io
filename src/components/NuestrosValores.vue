@@ -53,7 +53,7 @@
         <div class="valor-card">
           <div class="valor-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C16.97 2 21 6.03 21 11C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 11C3 6.03 7.03 2 12 2ZM12 4C8.13 4 5 7.13 5 11C5 14.87 8.13 18 12 18C15.87 18 19 14.87 19 11C19 7.13 15.87 4 12 4Z"/>
+              <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"/>
             </svg>
           </div>
           <h3>Proximidad y Personalización</h3>
@@ -63,7 +63,7 @@
         <div class="valor-card">
           <div class="valor-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M10 3H4C2.9 3 2 3.9 2 5V19C2 20.1 2.9 21 4 21H10C11.1 21 12 20.1 12 19V5C12 3.9 11.1 3 10 3ZM10 19H4V5H10V19ZM20 3H14C12.9 3 12 3.9 12 5V10H14V5H20V10H22V5C22 3.9 21.1 3 20 3ZM20 12H14V14H16V19H14V21H20C21.1 21 22 20.1 22 19V14C22 12.9 21.1 12 20 12ZM20 19H18V14H20V19Z"/>
+              <path d="M12 7V3H2V21H22V7H12ZM6 19H4V17H6V19ZM6 15H4V13H6V15ZM6 11H4V9H6V11ZM6 7H4V5H6V7ZM10 19H8V17H10V19ZM10 15H8V13H10V15ZM10 11H8V9H10V11ZM10 7H8V5H10V7ZM20 19H12V17H20V19ZM20 15H12V13H20V15ZM20 11H12V9H20V11Z"/>
             </svg>
           </div>
           <h3>Profesionalismo</h3>
@@ -74,7 +74,7 @@
         <div class="valor-card">
           <div class="valor-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2L3.09 8.26V15L12 22L20.91 15V8.26L12 2ZM12 4.36L18.09 9.23V14.77L12 19.64L5.91 14.77V9.23L12 4.36Z"/>
+              <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z"/>
             </svg>
           </div>
           <h3>Compromiso Social</h3>
@@ -84,7 +84,7 @@
         <div class="valor-card">
           <div class="valor-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M13 3C9.23 3 6.19 5.95 6 9.66L4.1 12.2C3.85 12.53 4.08 13 4.5 13H6V16C6 17.11 6.89 18 8 18H11V21C11 21.55 11.45 22 12 22S13 21.55 13 21V18H16C17.11 18 18 17.11 18 16V13H19.5C19.92 13 20.15 12.53 19.9 12.2L18 9.66C17.81 5.95 14.77 3 11 3H13ZM13 7C13.55 7 14 7.45 14 8S13.55 9 13 9 12 8.55 12 8 12.45 7 13 7Z"/>
+              <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 22L10.91 9.74L2 9L10.91 8.26L12 2Z"/>
             </svg>
           </div>
           <h3>Adaptabilidad</h3>
@@ -94,7 +94,7 @@
         <div class="valor-card">
           <div class="valor-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7V17C3 18.1 3.9 19 5 19H16C16.67 19 17.27 18.67 17.63 18.16L22 12L17.63 5.84ZM16 17H5V7H16L19.55 12L16 17Z"/>
+              <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"/>
             </svg>
           </div>
           <h3>Mejora Continua</h3>
