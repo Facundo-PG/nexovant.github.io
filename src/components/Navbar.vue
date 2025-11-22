@@ -60,7 +60,6 @@ const scrollToSection = (sectionId) => {
 
       <ul class="desktop-nav-links">
         <li><a href="#empresa" @click.prevent="scrollToSection('empresa')">Nuestra Empresa</a></li>
-        <li><router-link to="/quienes-somos" @click="isMenuOpen = false">Quiénes Somos</router-link></li>
         <li><a href="#valores" @click.prevent="scrollToSection('valores')">Valores</a></li>
         <li><a href="#servicios" @click.prevent="scrollToSection('servicios')">Servicios</a></li>
         <li><a href="#contacto" @click.prevent="scrollToSection('contacto')">Contacto</a></li>
