@@ -34,9 +34,9 @@
         <div class="card-inner">
           <div class="card-front">
             <div class="servicio-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M22 12h-4l-3 9L9 3l-3 9H2" />
-</svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.27 1.44L2 2.72L7.73 8.45C7.26 8.79 6.96 9.34 6.96 9.96C6.96 11.12 7.9 12.06 9.06 12.06C9.68 12.06 10.23 11.76 10.57 11.29L16.28 17L17.56 15.72L3.27 1.44ZM9.06 10.56C8.62 10.56 8.46 10.4 8.46 9.96S8.62 9.36 9.06 9.36 9.66 9.52 9.66 9.96 9.5 10.56 9.06 10.56ZM20.71 5.83L18.54 7.96L16.28 5.68L18.42 3.51C18.81 3.12 19.42 3.12 19.81 3.51L20.71 4.41C21.1 4.8 21.1 5.44 20.71 5.83Z"/>
+              </svg>
             </div>
             <h3>FIBRA ÓPTICA</h3>
           </div>
@@ -53,13 +53,9 @@
         <div class="card-inner">
           <div class="card-front">
             <div class="servicio-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 21h16"/>
-    <path d="M6 12v9"/>
-    <path d="M18 12v9"/>
-    <path d="M10 3l-4 8h12l-4-8"/>
-    <path d="M12 3v9"/>
-</svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.7 19L13.6 9.9C14.5 7.6 14 4.9 12.1 3C10.1 1 7.1 0.6 4.7 1.7L9 6L6 9L1.6 4.7C0.4 7.1 0.9 10.1 2.9 12.1C4.8 14 7.5 14.5 9.8 13.6L18.9 22.7C19.3 23.1 19.9 23.1 20.3 22.7L22.6 20.4C23.1 20 23.1 19.3 22.7 19Z"/>
+              </svg>
             </div>
             <h3>INSTALACIONES</h3>
           </div>
