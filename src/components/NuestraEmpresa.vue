@@ -4,7 +4,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 // Rutas dinámicas para las imágenes del carrusel
 const carouselImages = ref([
   import.meta.env.BASE_URL + "images/carousel-1.jpg",
-  import.meta.env.BASE_URL + "images/carousel-2.jpeg",
+  import.meta.env.BASE_URL + "images/carousel-2.jpg",
   import.meta.env.BASE_URL + "images/carousel-3.jpg",
 ]);
 const currentIndex = ref(0);
@@ -30,7 +30,7 @@ onUnmounted(() => { clearInterval(intervalId); });
           :src="image"
           v-show="index === currentIndex"
           alt="Imagen de la empresa"
-          class="carousel-image"
+          :class="['carousel-image', `carousel-image-${index + 1}`]"
         />
       </transition-group>
       <button @click="prevSlide" class="carousel-control prev">&lt;</button>
@@ -115,7 +115,28 @@ onUnmounted(() => { clearInterval(intervalId); });
 }
 
 .carousel-slides { width: 100%; height: 100%; position: relative; }
-.carousel-image { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; }
+.carousel-image { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+}
+
+/* Posicionamiento específico para cada imagen del carousel */
+.carousel-image-1 {
+  object-position: center top; /* Primera imagen: mostrar parte superior */
+}
+
+.carousel-image-2 {
+  object-position: center center; /* Segunda imagen: centrada */
+}
+
+.carousel-image-3 {
+  object-position: center 40%; /* Tercera imagen: ligeramente superior al centro */
+}
+
 .fade-enter-active, .fade-leave-active { transition: opacity 0.8s ease; }
 .fade-enter-from, .fade-leave-to { opacity: 0; }
 .carousel-control { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.4); color: white; border: none; padding: 10px 15px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; z-index: 10; transition: background-color 0.3s ease; }
