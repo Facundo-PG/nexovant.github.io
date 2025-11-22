@@ -26,6 +26,7 @@ const closeMenuAndSelectSection = (section) => {
 
       <ul class="desktop-nav-links">
         <li><a href="#" @click.prevent="closeMenuAndSelectSection('empresa')">Nuestra Empresa</a></li>
+        <li><router-link to="/quienes-somos" @click="isMenuOpen = false">Quiénes Somos</router-link></li>
         <li><a href="#" @click.prevent="closeMenuAndSelectSection('valores')">Valores</a></li>
         <li><a href="#" @click.prevent="closeMenuAndSelectSection('servicios')">Servicios</a></li>
         <li><a href="#" @click.prevent="closeMenuAndSelectSection('contacto')">Contacto</a></li>
@@ -45,6 +46,7 @@ const closeMenuAndSelectSection = (section) => {
 
     <div class="mobile-nav-links-container" :class="{ 'is-open': isMenuOpen }">
       <a href="#" @click.prevent="closeMenuAndSelectSection('empresa')">Nuestra Empresa</a>
+      <router-link to="/quienes-somos" @click="isMenuOpen = false">Quiénes Somos</router-link>
       <a href="#" @click.prevent="closeMenuAndSelectSection('valores')">Valores</a>
       <a href="#" @click.prevent="closeMenuAndSelectSection('servicios')">Servicios</a>
       <a href="#" @click.prevent="closeMenuAndSelectSection('contacto')">Contacto</a>

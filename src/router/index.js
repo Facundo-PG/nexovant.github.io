@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 // Asumiendo que tus vistas están en @/views/
 import LandingView from '@/views/LandingView.vue'; 
 import HomeView from '@/views/HomeView.vue'; // Ejemplo
+import QuienesSomos from '@/components/QuienesSomos.vue';
 
 // 🛑 CORRECCIÓN FINAL: Forzamos el uso de la ruta /nexovant/ en producción.
 // Si el entorno de producción está activo, usamos la ruta estricta.
@@ -24,6 +25,11 @@ const router = createRouter({
       path: '/home',
       name: 'Home',
       component: HomeView
+    },
+    {
+      path: '/quienes-somos',
+      name: 'QuienesSomos',
+      component: QuienesSomos
     }
     // Añade el resto de tus rutas aquí
   ]
