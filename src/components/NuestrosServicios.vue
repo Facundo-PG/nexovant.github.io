@@ -133,7 +133,7 @@
 /* CONTENEDOR DE LA CUADRÍCULA (GRID) */
 .servicios-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto en desktop */
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* Forzar fracciones iguales */
   gap: 30px;
   
   /* --- AJUSTES CLAVE --- */
@@ -148,11 +148,14 @@
 .service-card {
   background-color: transparent;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   height: 350px;
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.4s ease;
   position: relative;
+  overflow: hidden;
 }
 
 .service-card:hover {
@@ -161,11 +164,13 @@
 .card-inner {
   position: relative;
   width: 100%;
+  max-width: 100%;
   height: 100%;
   transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform-style: preserve-3d;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 
 .service-card:hover .card-inner {
@@ -332,7 +337,7 @@
   position: relative;
 }
 .stat-number {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 800;
   line-height: 1;
   background: linear-gradient(45deg, #fff, #bb86fc);
@@ -344,6 +349,10 @@
   z-index: 2;
   position: relative;
   transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .service-card:hover .stat-number {
