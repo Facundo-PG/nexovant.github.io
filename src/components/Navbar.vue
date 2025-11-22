@@ -80,10 +80,10 @@ const scrollToSection = (sectionId) => {
 
     <div class="mobile-nav-links-container" :class="{ 'is-open': isMenuOpen }">
       <a href="#empresa" @click.prevent="scrollToSection('empresa')">Nuestra Empresa</a>
-      <router-link to="/quienes-somos" @click="isMenuOpen = false">Quiénes Somos</router-link>
       <a href="#valores" @click.prevent="scrollToSection('valores')">Valores</a>
       <a href="#servicios" @click.prevent="scrollToSection('servicios')">Servicios</a>
       <a href="#contacto" @click.prevent="scrollToSection('contacto')">Contacto</a>
+      <router-link to="/quienes-somos" @click="isMenuOpen = false">Quiénes Somos</router-link>
     </div>
   </nav>
 </template>
