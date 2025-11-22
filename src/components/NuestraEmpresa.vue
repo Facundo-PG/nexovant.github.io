@@ -118,10 +118,11 @@ onUnmounted(() => { clearInterval(intervalId); });
 .carousel-image { 
   width: 100%; 
   height: 100%; 
-  object-fit: cover; 
+  object-fit: contain; 
   position: absolute; 
   top: 0; 
-  left: 0; 
+  left: 0;
+  background-color: #1a1a2e; /* Fondo para los espacios vacíos */
 }
 
 /* Posicionamiento específico para cada imagen del carousel */
