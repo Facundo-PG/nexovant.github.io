@@ -64,6 +64,7 @@ const scrollToSection = (sectionId) => {
         <li><a href="#valores" @click.prevent="scrollToSection('valores')">Valores</a></li>
         <li><a href="#servicios" @click.prevent="scrollToSection('servicios')">Servicios</a></li>
         <li><a href="#contacto" @click.prevent="scrollToSection('contacto')">Contacto</a></li>
+        <li><router-link to="/quienes-somos" @click="isMenuOpen = false">Quiénes Somos</router-link></li>
       </ul>
 
       <button 
