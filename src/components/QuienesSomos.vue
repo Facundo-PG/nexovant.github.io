@@ -173,7 +173,7 @@ onUnmounted(() => {
 .section-container {
   padding: 80px 40px;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background-color: #2c2c54;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,7 +195,7 @@ onUnmounted(() => {
   font-weight: 700;
   color: #2c3e50;
   margin-bottom: 20px;
-  background: linear-gradient(45deg, #6a1b9a, #8e24aa);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -203,7 +203,7 @@ onUnmounted(() => {
 
 .section-description {
   font-size: 1.3rem;
-  color: #555;
+  color:  #f8f9fa;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
