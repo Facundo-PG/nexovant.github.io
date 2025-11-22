@@ -130,7 +130,7 @@ onUnmounted(() => {
                   <img 
                     :src="image" 
                     :alt="`Trabajo ${index + 1}`"
-                    class="trabajo-image"
+                    :class="['trabajo-image', index === 1 || index === 3 ? 'bottom-align' : '']"
                   />
                   <div class="image-overlay">
                   </div>
@@ -349,6 +349,10 @@ onUnmounted(() => {
   object-fit: cover;
   object-position: top center;
   transition: transform 0.3s ease;
+}
+
+.trabajo-image.bottom-align {
+  object-position: bottom center;
 }
 
 .slide-item:hover .trabajo-image {
