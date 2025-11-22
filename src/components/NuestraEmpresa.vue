@@ -108,13 +108,13 @@ onUnmounted(() => { clearInterval(intervalId); });
 
 .carousel-container {
   width: 100%;
-  height: 65vh; /* Altura del carrusel aumentada */
-  max-height: 700px;
+  height: 70vh; /* Altura aumentada para mejor proporción */
+  max-height: 800px;
   position: relative;
   overflow: hidden;
 }
 
-.carousel-slides { width: 100%; height: 100%; position: relative; }
+.carousel-slides { width: 100%; height: 100%; position: relative; background-color: #1a1a2e; }
 .carousel-image { 
   width: 100%; 
   height: 100%; 
@@ -122,7 +122,6 @@ onUnmounted(() => { clearInterval(intervalId); });
   position: absolute; 
   top: 0; 
   left: 0;
-  background-color: #1a1a2e; /* Fondo para los espacios vacíos */
 }
 
 /* Posicionamiento específico para cada imagen del carousel */
