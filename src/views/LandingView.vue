@@ -7,6 +7,9 @@ const coverImage = import.meta.env.BASE_URL + 'images/cover.png';
 const router = useRouter();
 const imageOpacity = ref(0); // Iniciar con opacidad 0
 
+// Guardar referencia a la función para poder removerla después
+const preventTouchMove = (e) => e.preventDefault();
+
 // Control dinámico del scroll y efectos de animación
 onMounted(() => {
   // Ocultar scroll solo cuando este componente está activo
@@ -15,7 +18,7 @@ onMounted(() => {
     document.body.style.overflow = 'hidden';
     
     // Prevenir comportamientos de navegador móvil
-    document.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false });
+    document.addEventListener('touchmove', preventTouchMove, { passive: false });
   } catch (error) {
     console.warn('Error setting overflow:', error);
   }
@@ -36,12 +39,21 @@ onMounted(() => {
       }
     }, 2500);
     
-    // Redireccionar después de que termine el fade-out (3.5 segundos total)
+    // Redireccionar y restaurar scroll antes de navegar
     setTimeout(() => {
       try {
+        // Restaurar scroll ANTES de navegar
+        document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
+        document.removeEventListener('touchmove', preventTouchMove, { passive: false });
+        
         router.push('/home');
       } catch (error) {
         console.warn('Error navigating:', error);
+        // Restaurar scroll en caso de error también
+        document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
+        document.removeEventListener('touchmove', preventTouchMove, { passive: false });
         // Fallback: intentar navegar de nuevo
         window.location.href = '/home';
       }
@@ -55,8 +67,8 @@ onUnmounted(() => {
     document.documentElement.style.overflow = '';
     document.body.style.overflow = '';
     
-    // Remover event listeners
-    document.removeEventListener('touchmove', (e) => e.preventDefault());
+    // Remover event listeners con la referencia correcta
+    document.removeEventListener('touchmove', preventTouchMove, { passive: false });
   } catch (error) {
     console.warn('Error restoring overflow:', error);
   }
