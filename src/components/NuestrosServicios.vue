@@ -158,9 +158,7 @@
   overflow: hidden;
 }
 
-.service-card:hover {
-  transform: translateY(-10px);
-}
+/* El efecto de elevación se maneja en card-inner */
 .card-inner {
   position: relative;
   width: 100%;
@@ -170,17 +168,26 @@
   transform-style: preserve-3d;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-  overflow: hidden;
 }
 
 .service-card:hover .card-inner {
-  transform: rotateY(180deg);
+  transform: translateY(-10px) rotateY(180deg);
   box-shadow: 0 25px 50px rgba(138, 43, 226, 0.3);
+}
+
+/* Asegurar que el hover funcione correctamente */
+.service-card:hover .card-front {
+  transform: rotateY(180deg);
+}
+
+.service-card:hover .card-back {
+  transform: rotateY(0deg);
 }
 .card-front, .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 20px;
   display: flex;
@@ -189,7 +196,7 @@
   align-items: center;
   padding: 30px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .card-front {
@@ -197,6 +204,8 @@
   backdrop-filter: blur(15px);
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 2;
+  transform: rotateY(0deg);
 }
 
 .card-front::before {
@@ -219,6 +228,7 @@
   color: white;
   transform: rotateY(180deg);
   position: relative;
+  z-index: 1;
 }
 
 .card-back::before {
