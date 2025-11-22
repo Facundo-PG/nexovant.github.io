@@ -5,6 +5,7 @@ import Contacto from '../components/Contacto.vue';
 import NuestrosServicios from '../components/NuestrosServicios.vue';
 import NuestraEmpresa from '../components/NuestraEmpresa.vue';
 import NuestrosValores from '../components/NuestrosValores.vue';
+import Footer from '../components/Footer.vue';
 </script>
 
 <template>
@@ -18,6 +19,8 @@ import NuestrosValores from '../components/NuestrosValores.vue';
       <NuestrosServicios id="servicios" />
       <Contacto id="contacto" />
     </main>
+
+    <Footer />
   </div>
 </template>
 
