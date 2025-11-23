@@ -11,7 +11,6 @@ const currentIndex = ref(0);
 let intervalId = null;
 
 const nextSlide = () => { currentIndex.value = (currentIndex.value + 1) % carouselImages.value.length; };
-const prevSlide = () => { currentIndex.value = (currentIndex.value - 1 + carouselImages.value.length) % carouselImages.value.length; };
 const goToSlide = (index) => { currentIndex.value = index; };
 
 onMounted(() => { intervalId = setInterval(nextSlide, 5000); });
@@ -22,7 +21,7 @@ onUnmounted(() => { clearInterval(intervalId); });
   <section id="empresa" class="section-container">
     
     <!-- El carrusel se mantiene como el primer elemento para ser el banner superior -->
-    <div class="carousel-container">
+    <div class="carousel-container" @click="nextSlide">
       <transition-group name="fade" tag="div" class="carousel-slides">
         <img 
           v-for="(image, index) in carouselImages"
@@ -33,8 +32,6 @@ onUnmounted(() => { clearInterval(intervalId); });
           :class="['carousel-image', `carousel-image-${index + 1}`]"
         />
       </transition-group>
-      <button @click="prevSlide" class="carousel-control prev">&lt;</button>
-      <button @click="nextSlide" class="carousel-control next">&gt;</button>
       <div class="carousel-dots">
         <span
           v-for="(image, index) in carouselImages"
@@ -112,6 +109,7 @@ onUnmounted(() => { clearInterval(intervalId); });
   max-height: 700px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .carousel-slides { width: 100%; height: 100%; position: relative; background-color: #1a1a2e; }
@@ -133,10 +131,6 @@ onUnmounted(() => { clearInterval(intervalId); });
 
 .fade-enter-active, .fade-leave-active { transition: opacity 0.8s ease; }
 .fade-enter-from, .fade-leave-to { opacity: 0; }
-.carousel-control { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.4); color: white; border: none; padding: 10px 15px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; z-index: 10; transition: background-color 0.3s ease; }
-.carousel-control:hover { background-color: rgba(0, 0, 0, 0.7); }
-.carousel-control.prev { left: 30px; }
-.carousel-control.next { right: 30px; }
 .carousel-dots { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 10; }
 .dot { width: 12px; height: 12px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.6); cursor: pointer; transition: background-color 0.3s ease; }
 .dot.active { background-color: white; }
@@ -451,16 +445,6 @@ onUnmounted(() => { clearInterval(intervalId); });
     font-size: 0.9rem;
     padding: 12px;
   }
-  .carousel-control {
-    padding: 8px 12px;
-    font-size: 1.2rem;
-  }
-  .carousel-control.prev {
-    left: 15px;
-  }
-  .carousel-control.next {
-    right: 15px;
-  }
 }
 
 @media (max-width: 320px) {
@@ -484,16 +468,6 @@ onUnmounted(() => { clearInterval(intervalId); });
   }
   .mision-vision-item p {
     font-size: 0.85rem;
-  }
-  .carousel-control {
-    padding: 6px 10px;
-    font-size: 1rem;
-  }
-  .carousel-control.prev {
-    left: 10px;
-  }
-  .carousel-control.next {
-    right: 10px;
   }
   .dot {
     width: 8px;
