@@ -5,7 +5,7 @@
         <h3>Nexovant</h3>
         <p>Ingeniería y Tecnología SRL</p>
         <p class="footer-description">
-          Más de 20 años de experiencia en soluciones integrales de telecomunicaciones.
+          Más de 20 años de experiencia en el rubro de las telecomunicaciones.
         </p>
       </div>
 
