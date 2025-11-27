@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 
-const logoImage = import.meta.env.BASE_URL + 'images/cover.jpg';
+const logoImage = import.meta.env.BASE_URL + 'images/logo.jpg';
 const isMenuOpen = ref(false);
 const router = useRouter();
 const route = useRoute();
