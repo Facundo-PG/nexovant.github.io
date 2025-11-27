@@ -105,7 +105,7 @@ const scrollToSection = (sectionId) => {
   font-size: 1.5rem; font-weight: bold; color: #fff; text-decoration: none;
 }
 .logo-image {
-  height: 40px; width: 40px; border-radius: 50%;
+  height: 50px; width: 50px; border-radius: 50%;
   object-fit: cover; border: 2px solid #fff;
 }
 .desktop-nav-links {
